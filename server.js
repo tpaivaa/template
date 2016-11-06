@@ -1,10 +1,8 @@
-var serve = require('koa-static');
 var koa = require('koa');
 var app = koa();
-
-
-// $ GET /public
-app.use(serve('public/'));
+var root = 'public';
+var opts = '';
+app.use(require('koa-static')(root, opts));
 
 app.listen(3000);
 
