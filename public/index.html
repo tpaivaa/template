@@ -1,16 +1,57 @@
 <!doctype html>
 <html ng-app="wallboard">
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script src="js/index.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles/footer.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="js/index.js"></script>
 </head>
 <body>
-	<div ng-controller="wallCtrl">
-	{{ name }}<br>
-	{{details.connected}} <br>
-	{{details.routed}}<br>
-	{{details.unawailable}}<br> 
-	</div>
+	<header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Wallboard</a>
+				</div>
 
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#en"><i class="fa fa-home"></i> En</a></li>
+					<li><a href="#"><i class="fa fa-home"></i> Fr</a></li>
+				</ul>
+			</div>
+			</nav>
+	</header>
+
+	<div ng-controller="wallCtrl">
+		<div class="container">
+			<ul class="nav nav-pills" role="tablist">
+		  		<li role="presentation" class="active" ><a>Connected <span class="badge">{{details.connected}}</span></a></li>
+		  		<li role="presentation" class="active"><a>Routed <span class="badge">{{details.routed}}</span></a></li>
+		  		<li role="presentation" class="active"><a>Unavailable <span class="badge">{{details.unavailable}}</span></a></li>
+		  	</ul>
+		</div>
+		<hr>
+		<div class="container">
+			<ul class="nav nav-pills" role="tablist">
+				<li role="presentation" class="active"><a>Ubudu lubuido gristp
+				<span class="badge">14</span> </a>
+	  			</li>
+			</ul>
+		</div>
+		
+	</div>
+	<footer class="footer">
+		<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-footer">
+				<a class="navbar-brand" href="/">Bottom</a>
+			</div>
+		</div>
+		</nav>
+	</footer>
 </body>
 </html>

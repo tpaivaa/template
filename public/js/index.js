@@ -3,8 +3,9 @@ wallboard.controller('wallCtrl', ['$scope','$http','$timeout', function ($scope,
 	$scope.details = {};
 	$scope.details.connected = 'Hello World';
 	$scope.details.routed = 'Hello World';
-	$scope.details.unawailable = 'Hello World';
-	$scope.name = 'Nimi';
+	$scope.details.unavailable = 'Hello World';
+	$scope.header = 'Header';
+	$scope.footer = 'Footer';
 
 	// Function to get the data
 	$scope.getData = function (){
@@ -17,9 +18,11 @@ wallboard.controller('wallCtrl', ['$scope','$http','$timeout', function ($scope,
 		$timeout(function() {
 			$scope.getData();
 			$scope.intervalFunction();
-		}, 1000)
+		}, 5 * 60 * 1000)
 	};
 
+	// Get first data
+	$scope.getData();
 	// Kick off the interval
 	$scope.intervalFunction();
 
