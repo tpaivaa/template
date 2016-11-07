@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-size: 1rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  margin-bottom: 60px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.content-main,
+.content-secondary {
+  background: #eee;
+  line-height: 100px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.navbar-right {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+
+.content-main {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+@media (max-width: 32em) {
+  .content-main {
+    width: 50%;
+  }
+}
+@media (min-width: 32.1em) {
+  .content-main {
+    width: 66.66667%;
+  }
+}
+
+.content-secondary {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+@media (max-width: 32em) {
+  .content-secondary {
+    width: 50%;
+  }
+}
+@media (min-width: 32.1em) {
+  .content-secondary {
+    width: 33.33333%;
+  }
+}
+
+.highcharts-yaxis-grid .highcharts-grid-line {
+  display: none;
+}

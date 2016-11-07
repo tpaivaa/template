@@ -2,8 +2,12 @@ var wallboard = angular.module('wallboard', [])
 wallboard.controller('wallCtrl', ['$scope','$http','$timeout', function ($scope,$http,$timeout) {
 	$scope.details = {};
 	$scope.details.connected = 'Hello World';
-	$scope.details.routed = 'Hello World';
+	$scope.details.busy = 'Hello World';
 	$scope.details.unavailable = 'Hello World';
+	$scope.details.else = 'Hello World';
+	$scope.details.waitTime = 'Hello World';
+	$scope.details.onQue = 'Hello World';
+	$scope.details.serviceQuality = '0';
 	$scope.header = 'Header';
 	$scope.footer = 'Footer';
 

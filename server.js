@@ -15,7 +15,7 @@ app
 router.get('/', serve(root,opts));
 
 router.get('/json', function *(next) {
-	this.body = { connected: 'OK', routed: 15, unavailable: 120};
+	this.body = { connected: 1000, busy: 15, unavailable: 120, else: 190, waitTime:'00:01:00', onQue: 250, serviceQuality: 98};
 });
 
 app.listen(3000);
